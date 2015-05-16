@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Convenience for development.
+
+docker run --rm -i -t -p 80:80 -p 443:443 --name phono "$@" danhawkes/phono

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phono</title>
+  <link rel="stylesheet" href="materialize/css/materialize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div id="nav-wrapper">
+        <a id="nav-menu-toggle" href="#" data-activates="nav-drawer" class="full hide-on-large-only"><i class="small mdi-navigation-menu"></i></a>
+      </div>
+    </nav>
+    <ul id="nav-drawer" class="side-nav fixed">
+      <div class="nav-logo"></div>
+      <li class="bold no-padding"><a href="headphones" data-hash="headphones" class="waves-effect waves-teal">Headphones</a></li>
+      <li class="bold no-padding"><a href="syncthing" data-hash="syncthing" class="waves-effect waves-teal">Syncthing</a></li>
+      <li class="bold no-padding"><a href="transmission" data-hash="transmission" class="waves-effect waves-teal">Transmission</a></li>
+      <li class="bold no-padding"><a href="files" data-hash="files" class="waves-effect waves-teal">Files</a></li>
+    </ul>
+  </header>
+  <div class="main">
+    <iframe id="content-frame" class="z-depth-1" frameborder="0"></iframe>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="materialize/js/materialize.min.js"></script>
+  <script>
+    $('#nav-menu-toggle').sideNav();
+
+    // Hash navigation
+    function setIframe(hash) {
+      $('#content-frame').prop('src', hash);
+      window.location.hash =  hash;
+    }
+    var hash = window.location.hash;
+    setIframe((hash.length > 0) ? hash.substr(1) : 'headphones');
+    $('#nav-drawer li a').click(function(e) {
+      setIframe($(this).data('hash'));
+      e.preventDefault();
+    });
+  </script>
+</body>
+</html>
