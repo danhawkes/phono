@@ -32,7 +32,7 @@ Access the web UI at `https://<container ip>/`. The default username/password is
 
 If you want to mount a directory or data volume in place of in-container storage, do so with the `--volume` argument:  
 
-    `docker run … -v '/home/whatever/music:/phono/music'`
+    docker run … -v '/home/whatever/music:/phono/music'
 
 `/phono/appdata` - App configuration data.
 
