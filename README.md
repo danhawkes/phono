@@ -9,8 +9,8 @@ _Phono_ combines several 3rd-party tools to make it easier to download and trans
 
 As of now, it includes:
 
-* [headphones](1) and [transmission](2) to retrieve music from torrents and usenet
-* [syncthing](3) to synchronise music between your server and devices
+* [headphones](1), [sabnzbd](2) and [transmission](3) to retrieve music from torrents and usenet
+* [syncthing](4) to synchronise music between your server and devices
 
 <p align="center" >
   <img src="docs/screenshot.png" alt="Screenshot">
@@ -36,7 +36,7 @@ If you want to mount a directory or data volume in place of in-container storage
 
 `/phono/appdata` - App configuration data.
 
-App data is persisted in the container in between runs. If you'd like the container to be ephemeral, the configuration can be externalised by mounting it at `/phono/appdata`. The [default configuration](4) is in the repo.
+App data is persisted in the container in between runs. If you'd like the container to be ephemeral, the configuration can be externalised by mounting it at `/phono/appdata`. The [default configuration](5) is in the repo.
 
 `/etc/nginx/ssl` - SSL/TLS certs
 
@@ -49,6 +49,7 @@ Set with the `--password` flag:
     docker run … --password hunter1
 
 [1]: https://github.com/rembo10/headphones
-[2]: http://www.transmissionbt.com/
-[3]: https://syncthing.net/
-[4]: https://github.com/danhawkes/phono/tree/master/appdata
+[2]: http://sabnzbd.org/
+[3]: http://www.transmissionbt.com/
+[4]: https://syncthing.net/
+[5]: https://github.com/danhawkes/phono/tree/master/appdata
