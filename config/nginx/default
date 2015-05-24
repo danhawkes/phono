@@ -24,12 +24,16 @@ server {
     proxy_pass http://localhost:8181/;
   }
 
-  location /syncthing/ {
-    proxy_pass http://localhost:8384/;
+  location /sabnzbd/ {
+    proxy_pass http://localhost:8080/;
   }
-
+ 
   location /transmission {
     proxy_pass http://localhost:9091;
+  }
+
+  location /syncthing/ {
+    proxy_pass http://localhost:8384/;
   }
 
   location /files {

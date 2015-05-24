@@ -30,7 +30,7 @@ def generate_ssl_cert(hostname):
     certout = '/etc/nginx/ssl/cert.pem'
     cmd = 'openssl req -x509 -nodes -newkey rsa:2048 -keyout {0} -out {1} -days 3560 -subj "/CN={2}"'.format(
         keyout, certout, hostname)
-    subprocess.call(cmd, shell=True)
+    subprocess.check_call(cmd, shell=True)
 
 
 generate_ssl_cert(args.nginx_hostname)

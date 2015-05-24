@@ -1,3 +1,5 @@
 #!/bin/bash
 
+# Convenience for development.
+
 docker build --rm -t danhawkes/phono "$@" . 
