@@ -3,14 +3,14 @@
   <img src="docs/icon.png" alt="Phono logo">
 </p>
 
----
-
-_Phono_ combines several 3rd-party tools to make it easier to download and transfer music to your devices.
+__Phono__ combines several 3rd-party tools to make it easier to download and transfer music to your devices.
 
 As of now, it includes:
 
 * [headphones](1), [sabnzbd](2) and [transmission](3) to retrieve music from torrents and usenet
 * [syncthing](4) to synchronise music between your server and devices
+
+The aim is to minimise the amount of configuration required: as a user, the only thing you should need to do is add credentials for torrent sites/usenet services.
 
 <p align="center" >
   <img src="docs/screenshot.png" alt="Screenshot">
