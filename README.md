@@ -20,7 +20,7 @@ The aim is to minimise the amount of configuration required: as a user, the only
 
 Start the container with `docker run`:
 
-    docker run -p 80:80 -p 443:443 --name phono danhawkes/phono
+    docker run -p 80:80 -p 443:443 -p 22000:22000 -p 21025:21025/udp --name phono danhawkes/phono
 
 Access the web UI at `https://<container ip>/`. The default username/password is `admin:admin`.
 

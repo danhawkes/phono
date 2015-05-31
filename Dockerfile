@@ -39,6 +39,9 @@ VOLUME /phono/music
 VOLUME /phono/appdata
 VOLUME /etc/nginx/ssl
 
+# Nginx
 EXPOSE 80 443
+# Syncthing discovery 
+EXPOSE 22000 21025
 
 ENTRYPOINT ["/start"]

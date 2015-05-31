@@ -2,4 +2,4 @@
 
 # Convenience for development.
 
-docker run --rm -i -t -p 80:80 -p 443:443 --name phono danhawkes/phono "$@"
+docker run --rm -i -t -p 80:80 -p 443:443 -p 22000:22000 -p 21025:21025/udp --name phono danhawkes/phono "$@"
